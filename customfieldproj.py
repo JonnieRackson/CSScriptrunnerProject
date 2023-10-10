@@ -9,7 +9,7 @@ auth = HTTPBasicAuth("email@example.com", "<api_token>")
 # Define the custom field ID
 custom_field_id = "customfield_XXXXX"  # Replace XXXXX with your custom field ID
 
-# Step 1: Get a list of all projects
+# Get a list of all projects
 response = requests.get(f"{url}/project", headers={"Authorization": f"Basic {api_token}"})
 
 if response.status_code == 200:
@@ -21,7 +21,7 @@ if response.status_code == 200:
     # Initialize a dictionary to store project usage counts
     project_usage_counts = {}
     
-    # Step 2: For each project, count how many times the custom field has been used
+    # For each project, count how many times the custom field has been used
     for project in projects:
         project_key = project['key']
         
@@ -45,7 +45,7 @@ if response.status_code == 200:
         else:
             print(f"Failed to retrieve issue data for project {project_key}. Status code: {response.status_code}")
     
-    # Step 3: Generate the report
+    # Generate a report
     print(f"\nTotal field usage across all projects: {total_usage_count}\n")
     print("Project Usage Report:")
     for project_key, usage_count in project_usage_counts.items():
