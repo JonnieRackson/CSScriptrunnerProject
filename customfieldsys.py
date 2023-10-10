@@ -19,11 +19,15 @@ params = {
 }
 
 # Make the API request to search for issues
-response = requests.get(url, params=params, headers={"Authorization": f"Basic {api_token}"})
+response = requests.request(
+   "GET",
+   url,
+   headers=headers,
+   auth=auth
+)
 
 if response.status_code == 200:
-    issues = response.json()['issues']
-    total_count = len(issues)
+    total_count = response.json()['total']
     print(f"The custom field with ID {custom_field_id} has been used in {total_count} non-empty issues.")
 else:
     print(f"Failed to retrieve issue data. Status code: {response.status_code}")
