@@ -6,6 +6,10 @@ url = "https://your-domain.atlassian.net/rest/api/2/field/search"
 
 auth = HTTPBasicAuth("email@example.com", "<api_token>")
 
+headers = {
+  "Accept": "application/json"
+}  
+
 # Define custom field ID
 custom_field_id = "customfield_XXXXX"  # Replace XXXXX with your custom field ID
 
