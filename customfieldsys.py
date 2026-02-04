@@ -11,7 +11,7 @@ headers = {
 }  
 
 # Define custom field ID
-custom_field_id = "customfield_XXXXX"  # Replace XXXXX with your custom field 
+custom_field_id = "customfield_XXXXX"  # Replace XXXXX with your custom field ID
 
 # Define the JQL query to search for issues with non-empty custom fields
 jql_query = f'cf[{custom_field_id}] is not EMPTY'
