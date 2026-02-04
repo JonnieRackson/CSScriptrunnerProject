@@ -3,7 +3,7 @@ import com.atlassian.jira.issue.CustomFieldManager
 import com.atlassian.jira.issue.Issue
 
 // Define the custom field IDs
-def sourceFieldName = "customfield_10001" // Replace with your source custom field ID
+def sourceFieldName = "customfield_10001" // Replace with your source custom field 
 def targetFieldName = "customfield_10002" // Replace with your target custom field ID
 
 // Get the custom field manager
