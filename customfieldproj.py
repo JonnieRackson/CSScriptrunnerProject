@@ -11,7 +11,7 @@ headers = {
 }
 
 # Define the custom field ID
-custom_field_id = "customfield_XXXXX"  # Replace XXXXX with your custom field 
+custom_field_id = "customfield_XXXXX"  # Replace XXXXX with your custom field ID
 
 # Get a list of all projects
 projects_url = "https://your-jira-instance/rest/api/2/project"
